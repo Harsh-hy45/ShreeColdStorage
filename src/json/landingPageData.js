@@ -1,9 +1,9 @@
 /* eslint-disable import/extensions */
 
 // Services Img Imports
-import Web from '../assets/images/Services/Web.png';
-import Mobile from '../assets/images/Services/Mobile.png';
-import UIUX from '../assets/images/Services/Design.png';
+import Web from '../assets/images/Services/pic1.jpg';
+import Mobile from '../assets/images/Services/pic3.jpg';
+import UIUX from '../assets/images/Services/pic2.jpg';
 
 // Portfolio Img Imports
 import Recruiting from '../assets/images/Portfolio/Recruiting.png';

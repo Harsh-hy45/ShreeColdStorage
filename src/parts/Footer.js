@@ -6,6 +6,7 @@ import React from "react";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import { Link } from "react-router-dom";
 import BrandIcon from "./BrandIcon";
+import '../assets/css/footer.css'
 
 export default function Footer() {
   return (
@@ -15,21 +16,9 @@ export default function Footer() {
           <div className="w-1/3 flex-col ml-16 mr-8">
             <BrandIcon />
             <p className="w-full text-lg text-gray-400 font-light">
-              Preserving Freshness
+              Preserving Freshness with
               <br />
-              with Precision and Care.
-            </p>
-          </div>
-          <div className="w-1/3 mt-0 ml-16 mr-0 sm:ml-0 sm:mr-5">
-            <h1 className="text-lg text-theme-blue pt-4 pb-2">Office</h1>
-            <p className="text-lg text-gray-400 font-light">
-              info@shreecoldstore.com
-            </p>
-            <p className="text-md text-gray-400 font-light">
-              M/S Shree Cold Storage <br />
-              Village- Basilla, Nagri Panchayat- Devri Thana- Nagri (Ranchi)
-              <br />
-              Pin- 835303
+              Precision and Care.
             </p>
           </div>
           <div className="w-1/3 ml-16 sm:ml-0 mt-0">
@@ -59,6 +48,21 @@ export default function Footer() {
               Discuss a Project
             </Link>
           </div>
+          <div className="w-1/3 mt-0 ml-16 mr-0 sm:ml-0 sm:mr-5">
+            <h1 className="text-lg text-theme-blue pt-4 pb-2">Office</h1>
+            <p className="text-lg text-gray-400 font-light">
+              info@shreecoldstore.com
+            </p>
+            <p className="text-md text-gray-400 font-light">
+              M/S Shree Cold Storage <br />
+              Village- Basilla, Nagri Panchayat- Devri Thana- Nagri (Ranchi)
+              <br />
+              Pin- 835303
+            </p>
+          </div>
+        </div>
+        <div className="my-6">
+          <hr className="border-t border-gray-300 opacity-50 mx-4 sm:mx-16 temp" style={{ borderWidth: "1px", borderColor: "rgba(0, 0, 0, 0.1)" }} />
         </div>
         <div className="flex-col text-center mt-7">
           <p className="text-sm text-gray-600 font-light">
