@@ -1,7 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable import/extensions */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/jsx-filename-extension */
 import React, { Component } from "react";
 
 import {
@@ -27,7 +23,8 @@ export default class LandingPage extends Component {
   render() {
     return (
       <>
-        <Header />
+        {/* Pass the transparentBackground prop for Header in LandingPage */}
+        <Header transparentBackground={true} />
         <Hero />
         <Service data={Services} />
         <Portfolio data={Portfolios} />

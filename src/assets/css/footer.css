@@ -1,15 +1,13 @@
 .temp {
-    border: none; 
-    height: 1px; 
-    background-color: rgb(223 227 233); 
-    margin: 20px 0; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  height: 1px;
+  background-color: rgb(223 227 233);
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  hr {
+    height: 1px;
   }
-  
-  /* For responsive design */
-  @media (max-width: 768px) {
-    hr {
-      height: 1px; 
-    }
-  }
-  
+}

@@ -1,12 +1,8 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable import/extensions */
-
 import React from "react";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import { Link } from "react-router-dom";
 import BrandIcon from "./BrandIcon";
-import '../assets/css/footer.css'
+import "../assets/css/footer.css";
 
 export default function Footer() {
   return (
@@ -62,7 +58,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="my-6">
-          <hr className="border-t border-gray-300 opacity-50 mx-4 sm:mx-16 temp" style={{ borderWidth: "1px", borderColor: "rgba(0, 0, 0, 0.1)" }} />
+          <hr
+            className="border-t border-gray-300 opacity-50 mx-4 sm:mx-16 temp"
+            style={{ borderWidth: "1px", borderColor: "rgba(0, 0, 0, 0.1)" }}
+          />
         </div>
         <div className="flex-col text-center mt-7">
           <p className="text-sm text-gray-600 font-light">

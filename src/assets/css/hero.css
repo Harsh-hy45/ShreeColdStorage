@@ -1,0 +1,78 @@
+.services-section2 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.services-section2 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.services-section2 .relative {
+  z-index: 10;
+  text-align: center;
+}
+
+.bg-black.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-gray-200 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.transition {
+  transition: all 0.3s ease;
+}

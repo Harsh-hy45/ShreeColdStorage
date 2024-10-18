@@ -1,33 +1,35 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable import/extensions */
 import React from "react";
-
 import { Fade } from "react-awesome-reveal";
-
 import Button from "../elements/Button";
-
-import BuildWebsite from "../assets/images/hero/BuildWebsite.jpg";
+import "../assets/css/hero.css";
+import heroVideo from "assets/videos/vid5.mp4";
 
 export default function Hero() {
   return (
-    <section className="hero">
-      <div className="w-full lg:w-1/2 xl:pl-12 sm:pr-2 mt-8">
-        <h2 className="text-5xl sm:text-5xl text-theme-blue font-bold mb-5">
+    <section className="relative services-section2">
+      {/* Background Video */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+      >
+        <source src={heroVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Centered Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+        {/* Bright Text Directly on Top of Video */}
+        <h2 className="text-6xl text-white font-bold leading-tight mb-8">
           Preserving Freshness <br />
           with Precision and Care.
         </h2>
-
-        <p className="font-light text-xl text-gray-400 leading-relaxed mb-16">
-          We provide advanced cold storage solutions for preserving fruits,
-          vegetables, and local produce. Our 7,422 MT capacity ensures your
-          perishable goods remain fresh and secure.
-        </p>
         <Fade direction="up" delay={500} triggerOnce>
           <Button
             href="/project"
             type="link"
-            className="flex w-71 h-18 items-center px-14 py-5 text-white text-xl bg-theme-purple rounded-lg shadow-2xl hover:bg-dark-theme-purple transition duration-200"
+            className="flex w-auto items-center justify-center px-14 py-5 text-white text-xl bg-theme-purple rounded-lg shadow-2xl hover:bg-dark-theme-purple transition duration-200 mx-auto"
           >
             Our Services
             <svg
@@ -45,11 +47,6 @@ export default function Hero() {
               />
             </svg>
           </Button>
-        </Fade>
-      </div>
-      <div className="flex pt-5 md:w-fit w-full justify-center items-center order-first md:order-first lg:order-last lg:w-1/2">
-        <Fade direction="up" triggerOnce>
-          <img className="" src={BuildWebsite} alt="Build Website" />
         </Fade>
       </div>
     </section>
