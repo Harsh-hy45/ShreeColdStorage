@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import heroPortfolio from "assets/images/Services/portfolioHero.png";
-import "../assets/css/HeroPortfolio.css";
+import styles from "../assets/css/heroPortfolio.module.css";
 
 export default function HeroPortfolio() {
   const services = [
@@ -53,7 +53,9 @@ export default function HeroPortfolio() {
   ];
 
   return (
-    <section className="services-section1 grid lg:grid-cols-2 gap-6 bg-white">
+    <section
+      className={`grid lg:grid-cols-2 gap-6 bg-white ${styles["services-section"]}`}
+    >
       <div className="w-full flex flex-col px-5 mb-5 sm:mb-0 sm:px-12 sm:mt-6 lg:mt-6">
         <Fade direction="up" triggerOnce>
           <h1 className="text-5xl text-theme-blue font-bold leading-tight mb-5">
@@ -81,14 +83,16 @@ export default function HeroPortfolio() {
       </div>
 
       {/* Tabs Section */}
-      <div className="tabs-section lg:col-span-2 grid grid-cols-1 gap-8 mt-10">
+      <div className="lg:col-span-2 grid grid-cols-1 gap-8 mt-10">
         {services.map((service, index) => (
           <div
             key={index}
-            className="service-tab flex lg:flex-row items-center p-6 rounded-lg shadow-lg bg-white hover:bg-gray-50 transition-transform transform hover:-translate-y-2"
+            className={`flex lg:flex-row items-center p-6 rounded-lg shadow-lg bg-white hover:bg-gray-50 transition-transform transform hover:-translate-y-2 ${styles["service-tab"]}`}
           >
             {/* Serial Number Column */}
-            <div className="serial-number flex justify-center items-center rounded-full text-white font-bold bg-theme-blue w-12 h-12 mr-4 lg:mr-8">
+            <div
+              className={`flex justify-center items-center rounded-full text-white font-bold w-12 h-12 mr-4 lg:mr-8 ${styles["serial-number"]}`}
+            >
               {index + 1}
             </div>
 

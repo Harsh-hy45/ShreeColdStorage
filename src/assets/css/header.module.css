@@ -16,12 +16,7 @@
 }
 
 .header.transparent:hover {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Slightly dark transparent background */
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .header.transparent ul li a {
@@ -29,7 +24,7 @@
 }
 
 .header.transparent:hover ul li a {
-  color: black; /* Keep text color unchanged */
+  color: black;
 }
 
 .container {

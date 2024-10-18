@@ -2,12 +2,12 @@ import React from "react";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import { Link } from "react-router-dom";
 import BrandIcon from "./BrandIcon";
-import "../assets/css/footer.css";
+import styles from "../assets/css/footer.module.css";
 
 export default function Footer() {
   return (
     <div className="bg-gray-50 border-t border-gray-200 pb-6">
-      <div className="container flex-col mx-auto ">
+      <div className="container flex-col mx-auto">
         <div className="flex flex-col sm:flex-row mt-8 justify-center">
           <div className="w-1/3 flex-col ml-16 mr-8">
             <BrandIcon />
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
         <div className="my-6">
           <hr
-            className="border-t border-gray-300 opacity-50 mx-4 sm:mx-16 temp"
+            className={`border-t border-gray-300 opacity-50 mx-4 sm:mx-16 ${styles.temp}`}
             style={{ borderWidth: "1px", borderColor: "rgba(0, 0, 0, 0.1)" }}
           />
         </div>

@@ -1,10 +1,10 @@
-.services-section1 {
+.services-section {
   padding: 3rem 0rem;
   background-color: #f9f9f9;
 }
 
 @media (min-width: 1024px) {
-  .services-section1 {
+  .services-section {
     padding: 0rem 3rem;
     background-color: #f9f9f9;
   }
@@ -23,7 +23,6 @@
   color: #fff;
 }
 
-/* Service tab styles */
 .service-tab {
   display: flex;
   align-items: center;
@@ -37,33 +36,4 @@
 .service-tab:hover {
   transform: translateY(-5px);
   background-color: #f1f5f9;
-}
-
-.service-tab h2 {
-  color: #1d4ed8;
-}
-
-.service-tab p {
-  margin-top: 10px;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-@media (min-width: 1024px) {
-  .service-tab {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .serial-number {
-    font-size: 1.5rem;
-    width: 4rem;
-    height: 4rem;
-    margin-right: 2rem;
-  }
-
-  .service-tab h2 {
-    text-align: left;
-    margin-bottom: 0.5rem;
-  }
 }

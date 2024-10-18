@@ -1,12 +1,12 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import Button from "../elements/Button";
-import "../assets/css/hero.css";
+import styles from "../assets/css/hero.module.css";
 import heroVideo from "assets/videos/vid5.mp4";
 
 export default function Hero() {
   return (
-    <section className="relative services-section2">
+    <section className={`relative ${styles["services-section"]}`}>
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -18,9 +18,7 @@ export default function Hero() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Centered Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        {/* Bright Text Directly on Top of Video */}
         <h2 className="text-6xl text-white font-bold leading-tight mb-8">
           Preserving Freshness <br />
           with Precision and Care.
