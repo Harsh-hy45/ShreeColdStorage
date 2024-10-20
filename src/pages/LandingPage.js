@@ -27,9 +27,9 @@ export default class LandingPage extends Component {
         <Header transparentBackground={true} />
         <Hero />
         <Service data={Services} />
-        <Portfolio data={Portfolios} />
+        {/* <Portfolio data={Portfolios} /> */}
         <Advantage data={Advantages} />
-        <Testimonial data={Testimonials} />
+        {/* <Testimonial data={Testimonials} /> */}
         <Discuss />
         <Footer />
       </>

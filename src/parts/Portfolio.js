@@ -18,7 +18,6 @@ export default function Portfolio({ data }) {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-2 xl:gap-8 justify-items-center">
         {data.map((item, index) => (
-          // eslint-disable-next-line react/no-array-index-key
           <Fade
             direction="up"
             triggerOnce
