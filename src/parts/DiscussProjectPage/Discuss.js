@@ -2,7 +2,7 @@ import React from "react";
 
 import { Fade } from "react-awesome-reveal";
 
-import Button from "../elements/Button";
+import Button from "../../elements/Button";
 
 export default function Discuss() {
   return (

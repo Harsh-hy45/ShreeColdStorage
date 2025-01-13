@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import Team from "assets/images/hero/team.png";
-import styles from "../assets/css/heroTeam.module.css";
+import styles from "../../assets/css/heroTeam.module.css";
 
 export default function HeroTeam() {
   return (

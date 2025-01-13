@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import Button from "../elements/Button";
-import styles from "../assets/css/hero.module.css";
+import Button from "../../elements/Button";
+import styles from "../../assets/css/hero.module.css";
 import heroVideo from "assets/videos/vid5.mp4";
 
 export default function Hero() {

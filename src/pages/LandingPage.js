@@ -7,12 +7,12 @@ import {
   Testimonials,
 } from "json/landingPageData";
 import Header from "parts/Header";
-import Hero from "parts/Hero";
+import Hero from "parts/LandingPage/Hero";
 import Service from "parts/ServicesPage/Service";
 import Portfolio from "parts/Portfolio";
-import Advantage from "parts/Advantage";
-import Testimonial from "parts/Testimonial";
-import Discuss from "parts/Discuss";
+import Advantage from "parts/LandingPage/Advantage";
+import Testimonial from "parts/NOUSE/Testimonial";
+import Discuss from "parts/DiscussProjectPage/Discuss";
 import Footer from "parts/Footer";
 
 export default class LandingPage extends Component {

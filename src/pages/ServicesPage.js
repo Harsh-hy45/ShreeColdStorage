@@ -6,9 +6,9 @@ import React, { Component } from "react";
 
 import Header from "parts/Header";
 import HeroPortfolio from "parts/ServicesPage/HeroPortfolio";
-import Discuss from "parts/Discuss";
+import Discuss from "parts/DiscussProjectPage/Discuss";
 import Footer from "parts/Footer";
-import AllPortfolio from "parts/AllPortfolio";
+import AllPortfolio from "parts/LandingPage/AllPortfolio";
 
 import { Portfolios } from "json/landingPageData";
 

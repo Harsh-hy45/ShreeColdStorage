@@ -1,10 +1,10 @@
 import React from "react";
 import Fade from "react-awesome-reveal";
-import Button from "../elements/Button";
-import graphic1 from "../assets/images/Advantages/graphic1.png";
-import graphic2 from "../assets/images/Advantages/graphic2.png";
-import graphic3 from "../assets/images/Advantages/graphic3.png";
-import graphic4 from "../assets/images/Advantages/graphic4.png";
+import Button from "../../elements/Button";
+import graphic1 from "../../assets/images/Advantages/graphic1.png";
+import graphic2 from "../../assets/images/Advantages/graphic2.png";
+import graphic3 from "../../assets/images/Advantages/graphic3.png";
+import graphic4 from "../../assets/images/Advantages/graphic4.png";
 
 const heroPortfolioData = [
   {
