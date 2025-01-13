@@ -3,7 +3,7 @@ import { Transition } from "@headlessui/react";
 import { useLocation } from "react-router-dom";
 import Button from "../elements/Button";
 import BrandIcon from "./BrandIcon";
-import "../assets/css/header.css";
+import styles from "../assets/css/header.module.css";
 
 export default function Header({ transparentBackground }) {
   const [isCollapse, setIsCollapse] = useState(false);
@@ -18,9 +18,13 @@ export default function Header({ transparentBackground }) {
   ];
 
   return (
-    <header className={`header ${transparentBackground ? "transparent" : ""}`}>
+    <header
+      className={`${styles.header} ${
+        transparentBackground ? styles.transparent : ""
+      }`}
+    >
       <div
-        className={`container flex ${
+        className={`${styles.container} flex ${
           isCollapse ? "flex-col" : "justify-between items-center"
         } mx-auto px-4 lg:px-0`}
       >
@@ -60,7 +64,7 @@ export default function Header({ transparentBackground }) {
             <li key={href} className="py-2 lg:py-0">
               <Button
                 className={`${
-                  path === href ? "active-link" : ""
+                  path === href ? styles["active-link"] : ""
                 } font-medium text-lg px-5 no-underline hover:underline`}
                 type="link"
                 href={href}
@@ -95,7 +99,7 @@ export default function Header({ transparentBackground }) {
                 <li key={href} className="py-2">
                   <Button
                     className={`${
-                      path === href ? "active-link" : ""
+                      path === href ? styles["active-link"] : ""
                     } font-medium px-10 no-underline hover:underline`}
                     type="link"
                     href={href}

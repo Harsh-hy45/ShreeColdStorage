@@ -1,11 +1,13 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import Team from "assets/images/hero/team.png";
-import "../assets/css/HeroTeam.css";
+import styles from "../assets/css/heroTeam.module.css";
 
 export default function HeroTeam() {
   return (
-    <section className="services-section grid lg:grid-cols-2 gap-6 bg-white">
+    <section
+      className={`grid lg:grid-cols-2 gap-6 bg-white ${styles["services-section"]}`}
+    >
       <div className="w-full flex flex-col px-5 mb-5 sm:mb-0 sm:px-12 sm:mt-6 lg:mt-6">
         <Fade direction="up" triggerOnce>
           <h1 className="text-5xl text-theme-blue font-bold leading-tight mb-5">
@@ -20,7 +22,7 @@ export default function HeroTeam() {
         </Fade>
       </div>
 
-      <div className="image-section">
+      <div className={styles["image-section"]}>
         <Fade direction="top-right" triggerOnce delay={300}>
           <img src={Team} alt="Hero" />
         </Fade>

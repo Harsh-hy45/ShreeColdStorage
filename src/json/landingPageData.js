@@ -1,7 +1,7 @@
 // Services Img Imports
-import Web from "../assets/images/Services/pic1.jpg";
-import Mobile from "../assets/images/Services/pic3.jpg";
-import UIUX from "../assets/images/Services/pic2.jpg";
+import Storage1 from "../assets/images/Services/services-1.png";
+import Storage2 from "../assets/images/Services/services-2.jpg";
+import Storage3 from "../assets/images/Services/services-3.jpg";
 
 // Portfolio Img Imports
 import Recruiting from "../assets/images/Portfolio/Recruiting.png";
@@ -38,19 +38,25 @@ import UIUX2 from "../assets/images/TeamMembers/UIUX2.jpg";
 
 export const Services = [
   {
-    title: "Web Development",
-    imageUrl: Web,
+    title: "State-of-the-Art Facilities",
+    imageUrl: Storage1,
     animation: "left",
+    description:
+      "Our cold storage facility ensures your goods are stored in optimal conditions with cutting-edge technology and robust infrastructure.",
   },
   {
-    title: "Mobile Development",
-    imageUrl: Mobile,
+    title: "Preserving Local Produce",
+    imageUrl: Storage2,
     animation: "up",
+    description:
+      "From tamarind to mahua, we are equipped to preserve a variety of local produce, supporting farmers and distributors across the region.",
   },
   {
-    title: "UI/UX Design",
-    imageUrl: UIUX,
+    title: "Logistics & Efficiency",
+    imageUrl: Storage3,
     animation: "right",
+    description:
+      "With our integrated weighing bridge and seamless logistics, we ensure precise measurements and efficient handling of your products.",
   },
 ];
 

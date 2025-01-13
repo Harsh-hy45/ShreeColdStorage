@@ -8,7 +8,7 @@ import {
 } from "json/landingPageData";
 import Header from "parts/Header";
 import Hero from "parts/Hero";
-import Service from "parts/Service";
+import Service from "parts/ServicesPage/Service";
 import Portfolio from "parts/Portfolio";
 import Advantage from "parts/Advantage";
 import Testimonial from "parts/Testimonial";
@@ -27,9 +27,9 @@ export default class LandingPage extends Component {
         <Header transparentBackground={true} />
         <Hero />
         <Service data={Services} />
-        <Portfolio data={Portfolios} />
+        {/* <Portfolio data={Portfolios} /> */}
         <Advantage data={Advantages} />
-        <Testimonial data={Testimonials} />
+        {/* <Testimonial data={Testimonials} /> */}
         <Discuss />
         <Footer />
       </>
