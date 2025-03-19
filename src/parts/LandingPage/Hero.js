@@ -25,7 +25,7 @@ export default function Hero() {
         </h2>
         <Fade direction="up" delay={500} triggerOnce>
           <Button
-            href="/project"
+            href="/services"
             type="link"
             className="flex w-auto items-center justify-center px-14 py-5 text-white text-xl bg-theme-purple rounded-lg shadow-2xl hover:bg-dark-theme-purple transition duration-200 mx-auto"
           >

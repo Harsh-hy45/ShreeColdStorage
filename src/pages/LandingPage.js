@@ -9,9 +9,9 @@ import {
 import Header from "parts/Header";
 import Hero from "parts/LandingPage/Hero";
 import Service from "parts/ServicesPage/Service";
-import Portfolio from "parts/Portfolio";
+import Portfolio from "parts/LandingPage/Portfolio";
 import Advantage from "parts/LandingPage/Advantage";
-import Testimonial from "parts/NOUSE/Testimonial";
+import Testimonial from "parts/ABOUT US/Testimonial";
 import Discuss from "parts/DiscussProjectPage/Discuss";
 import Footer from "parts/Footer";
 

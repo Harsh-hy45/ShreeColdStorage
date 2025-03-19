@@ -4,8 +4,8 @@
 import React, { Component } from "react";
 
 import Header from "parts/Header";
-import HeroTeam from "parts/NOUSE/HeroTeam";
-import AllTeam from "parts/NOUSE/AllTeam";
+import Team from "parts/ABOUT US/Team";
+import AllTeam from "parts/ABOUT US/AllTeam";
 import Footer from "parts/Footer";
 
 import { TeamMembers } from "json/landingPageData";
@@ -19,7 +19,7 @@ export default class TeamPage extends Component {
     return (
       <>
         <Header />
-        <HeroTeam />
+        <Team />
         <AllTeam data={TeamMembers} />
         <Footer />
       </>
