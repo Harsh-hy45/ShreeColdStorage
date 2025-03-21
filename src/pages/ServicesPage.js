@@ -3,14 +3,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/jsx-filename-extension */
 import React, { Component } from "react";
-
+import { Services, Portfolios } from "json/landingPageData";
 import Header from "parts/Header";
 import ServicePortfolio from "parts/ServicesPage/ServicePortfolio";
 import Discuss from "parts/DiscussProjectPage/Discuss";
+import Service from "parts/ServicesPage/Service";
 import Footer from "parts/Footer";
 import AllPortfolio from "parts/LandingPage/AllPortfolio";
-
-import { Portfolios } from "json/landingPageData";
 
 export default class ServicesPage extends Component {
   componentDidMount() {
@@ -22,7 +21,8 @@ export default class ServicesPage extends Component {
       <>
         <Header />
         <ServicePortfolio />
-        <AllPortfolio data={Portfolios} />
+        <Service data={Services} />
+        {/* <AllPortfolio data={Portfolios} /> */}
         <Discuss />
         <Footer />
       </>
