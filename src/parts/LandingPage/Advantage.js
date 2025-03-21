@@ -6,7 +6,7 @@ import graphic2 from "../../assets/images/Advantages/graphic2.png";
 import graphic3 from "../../assets/images/Advantages/graphic3.png";
 import graphic4 from "../../assets/images/Advantages/graphic4.png";
 
-const heroPortfolioData = [
+const servicePortfolioData = [
   {
     title: "Cold Storage for Perishable Goods",
     description:
@@ -50,7 +50,7 @@ export default function Advantage() {
         <div className="flex flex-col sm:flex-row">
           {/* First Two Tabs */}
           <div className="flex-col">
-            {heroPortfolioData.slice(0, 2).map((item, index) => (
+            {servicePortfolioData.slice(0, 2).map((item, index) => (
               <Fade bottom triggerOnce delay={500 * index} key={index}>
                 <div className="bg-white flex flex-row items-center p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
                   <img
@@ -71,7 +71,7 @@ export default function Advantage() {
 
           {/* Second Two Tabs */}
           <div className="flex-col -mt-4 sm:mt-14">
-            {heroPortfolioData.slice(2, 4).map((item, index) => (
+            {servicePortfolioData.slice(2, 4).map((item, index) => (
               <Fade bottom triggerOnce delay={500 * index} key={index}>
                 <div className="bg-white flex flex-row items-center p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
                   <img

@@ -1,9 +1,9 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import heroPortfolio from "assets/images/Services/portfolioHero.png";
-import styles from "../../assets/css/ServicesPages/heroPortfolio.module.css";
+import servicePortfolio from "assets/images/Services/portfolioHero.png";
+import styles from "../../assets/css/ServicesPages/servicePortfolio.module.css";
 
-export default function HeroPortfolio() {
+export default function ServicePortfolio() {
   const services = [
     {
       title: "Cold Storage for Perishable Goods",
@@ -78,7 +78,7 @@ export default function HeroPortfolio() {
       {/* Image Section */}
       <div className="image-section">
         <Fade direction="up" triggerOnce>
-          <img src={heroPortfolio} alt="Hero" />
+          <img src={servicePortfolio} alt="Hero" />
         </Fade>
       </div>
 
