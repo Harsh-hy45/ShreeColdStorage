@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-section {
+/* section {
   @apply mb-28;
-}
+} */
 
 .active-link {
   @apply text-theme-purple;

@@ -35,6 +35,10 @@
   align-items: center;
 }
 
+.header.transparent ul li:last-child a {
+  color: white;
+}
+
 .active-link {
   font-weight: bold;
   text-decoration: underline;
@@ -54,6 +58,22 @@
   .lg:hidden ul {
     transition: transform 0.3s ease-in-out;
     transform: translateY(0); /* Dropdown behavior */
+  }
+
+  .header.transparent:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .header.transparent ul li a {
+    color: black;
+  }
+
+  .header.transparent ul li:last-child a {
+    color: white;
+  }
+
+  .header.transparent button {
+    color: white;
   }
 
   .header button {

@@ -19,7 +19,7 @@ export default function Hero() {
       </video>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <h2 className="text-6xl text-white font-bold leading-tight mb-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-8">
           Preserving Freshness <br />
           with Precision and Care.
         </h2>
@@ -27,11 +27,11 @@ export default function Hero() {
           <Button
             href="/services"
             type="link"
-            className="flex w-auto items-center justify-center px-14 py-5 text-white text-xl bg-theme-purple rounded-lg shadow-2xl hover:bg-dark-theme-purple transition duration-200 mx-auto"
+            className="flex w-auto items-center justify-center px-10 sm:px-12 md:px-14 py-4 sm:py-5 text-white text-lg sm:text-xl bg-theme-purple rounded-lg shadow-2xl hover:bg-dark-theme-purple transition duration-200 mx-auto"
           >
             Our Services
             <svg
-              className="ml-2 w-7 h-7 text-white animate-bounce-x"
+              className="ml-2 w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7 text-white animate-bounce-x"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
