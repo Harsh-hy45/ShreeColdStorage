@@ -35,86 +35,48 @@ const servicePortfolioData = [
 
 export default function Advantage() {
   return (
-    <div className="bg-gray-50 py-20 mb-24 sm:mb-18 xl:mb-16">
-      <div className="container mx-auto">
+    <div className="bg-gray-50 py-20 mb-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade bottom triggerOnce>
-          <h1 className="text-5xl text-theme-blue text-center font-bold">
+          <h1 className="text-4xl sm:text-5xl text-theme-blue text-center font-bold">
             Why Choose Us
           </h1>
-
-          <p className="font-light text-lg text-gray-400 text-center mb-12 sm:mb-5 xl:mb-0">
+          <p className="font-light text-lg text-gray-400 text-center mb-8 sm:mb-12">
             Why you should choose us to handle your project.
           </p>
         </Fade>
 
-        <div className="flex flex-col sm:flex-row">
-          {/* First Two Tabs */}
-          <div className="flex-col">
-            {servicePortfolioData.slice(0, 2).map((item, index) => (
-              <Fade bottom triggerOnce delay={500 * index} key={index}>
-                <div className="bg-white flex flex-row items-center p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
-                  <img
-                    src={item.image}
-                    alt="Graphic"
-                    className="w-20 h-20 object-contain"
-                  />
-                  <div className="flex-col pl-5">
-                    <h2 className="text-theme-blue text-2xl">{item.title}</h2>
-                    <p className="font-light text-gray-400">
-                      {item.description}
-                    </p>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+          {servicePortfolioData.map((item, index) => (
+            <Fade bottom triggerOnce delay={500 * index} key={index}>
+              <div className="bg-white flex flex-col sm:flex-row items-center p-5 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
+                <img
+                  src={item.image}
+                  alt="Graphic"
+                  className="w-24 h-24 sm:w-20 sm:h-20 object-contain mb-4 sm:mb-0 sm:mr-5"
+                />
+                <div className="text-center sm:text-left">
+                  <h2 className="text-theme-blue text-xl sm:text-2xl font-semibold">
+                    {item.title}
+                  </h2>
+                  <p className="font-light text-gray-400 text-sm sm:text-base">
+                    {item.description}
+                  </p>
                 </div>
-              </Fade>
-            ))}
-          </div>
-
-          {/* Second Two Tabs */}
-          <div className="flex-col -mt-4 sm:mt-14">
-            {servicePortfolioData.slice(2, 4).map((item, index) => (
-              <Fade bottom triggerOnce delay={500 * index} key={index}>
-                <div className="bg-white flex flex-row items-center p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
-                  <img
-                    src={item.image}
-                    alt="Graphic"
-                    className="w-20 h-20 object-contain"
-                  />
-                  <div className="flex-col pl-5">
-                    <h2 className="text-theme-blue text-2xl">{item.title}</h2>
-                    <p className="font-light text-gray-400">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </Fade>
-            ))}
-          </div>
+              </div>
+            </Fade>
+          ))}
         </div>
 
-        {/* See More Button */}
         <div className="flex justify-center mt-12">
           <Button
             href="/services"
             type="link"
-            className="flex flex-grow-0 w-36 h-12 sm:w-40 sm:h-14 lg:w-44 lg:h-16 xl:w-36 xl:h-12 text-theme-purple px-5 border border-theme-purple items-center mt-14 rounded-full justify-center transition duration-300 hover:bg-theme-purple hover:text-white"
+            className="px-6 py-3 text-theme-purple border border-theme-purple flex items-center justify-center rounded-full transition duration-300 hover:bg-theme-purple hover:text-white text-base sm:text-lg whitespace-nowrap"
           >
-            <p className="font-normal py-3 lg:text-lg xl:text-base">See More</p>
+            <span className="font-normal">See More</span>
             <svg
-              className="w-4 h-4"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-            <svg
-              className="w-4 h-4 -ml-2"
+              className="w-5 h-5 ml-2"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

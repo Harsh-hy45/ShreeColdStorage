@@ -32,10 +32,10 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.21",
     "eslint-config-airbnb": "^18.2.1",
-    "postcss": "^8.4.40",
-    "tailwindcss": "^3.4.6"
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
   },
   "browserslist": {
     "production": [
