@@ -1,70 +1,93 @@
-import React, { useState } from "react";
-import { Fade } from "react-awesome-reveal";
-import styles from "../../assets/css/ServicesPages/service.module.css";
+import React from "react";
+import styles from "../../assets/css/technology.module.css";
+import refrigerationImg from "../../assets/images/Technology/refrigerationImg.png";
+import condenserImg from "../../assets/images/Technology/compressorImg.png";
+import evaporatorImg from "../../assets/images/Technology/evaporatorImg.png";
+import automationImg from "../../assets/images/Technology/automation.jpg";
 
-export default function Technology({ data }) {
-  const [activeIndex, setActiveIndex] = useState(null);
+const sections = [
+  {
+    title: "Advanced Refrigeration System",
+    image: refrigerationImg,
+    description: [
+      "Ammonia, a highly efficient and eco-friendly refrigerant, powers our refrigeration system, ensuring rapid cooling and uniform temperature across all chambers.",
+      "The overfeed refrigeration system ensures consistent cooling performance, protecting stored produce from any temperature fluctuations.",
+      "Our Kirloskar multi-cylinder reciprocating compressors provide robust and reliable performance with automatic capacity control, smooth operation, and hydraulic delay valves.",
+    ],
+  },
+  {
+    title: "High-Efficiency Condenser System",
+    image: condenserImg,
+    description: [
+      "Equipped with 2-inch diameter condenser pipes, these units utilize natural air cooling and water sprays for maximum heat rejection efficiency, even in extreme temperatures.",
+    ],
+  },
+  {
+    title: "Precision Cooling with Evaporators",
+    image: evaporatorImg,
+    description: [
+      "Engineered with stainless steel (SS-304) coils and aluminum fins to provide superior heat transfer efficiency.",
+      "Fitted with axial fans and Variable Frequency Drives (VFDs) to optimize airflow and energy consumption.",
+    ],
+  },
+  {
+    title: "Intelligent Monitoring and Automation",
+    image: automationImg,
+    description: [
+      "Real-time monitoring and control of temperature, humidity, air circulation, and CO₂ levels.",
+      "Automated alarms and data logging help maintain safety and quality.",
+    ],
+  },
+];
 
-  const handleToggle = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+const additionalFeatures = [
+  "Energy-efficient insulation with high-density PUF panels to minimize temperature loss.",
+  "Automated defrosting system to prevent ice buildup and ensure consistent performance.",
+  "Uninterrupted power backup with diesel generator integration for continuous operation.",
+  "Integrated humidity control system to maintain optimal storage conditions.",
+  "Real-time cloud-based remote monitoring for tracking system performance and alerts.",
+  "Optimized Air Circulation System to ensure uniform cooling and prevent temperature variations.",
+];
 
+const Technology = () => {
   return (
-    <div className="bg-gray-50">
-      <div className="container mx-auto pt-20 pb-28">
-        <Fade direction="right" triggerOnce>
-          <h1 className="text-5xl text-theme-blue text-center font-bold mb-8">
-            Cold Storage Solutions for Your Growing Needs
-          </h1>
-        </Fade>
-        <Fade direction="left" triggerOnce>
-          <p
-            className={`${styles.mainDescription} font-light text-lg text-gray-400 text-center mx-auto`}
-          >
-            At Shree Cold Storage, we are committed to safeguarding your
-            perishable goods with state-of-the-art technology and precise care.
-            Explore our services tailored to meet the diverse needs of your
-            business.
-          </p>
-        </Fade>
+    <div className={styles.technologyContainer}>
+      <h1 className={styles.technologyTitle}>
+        Technology at Shree Cold Storage
+      </h1>
+      <p className={styles.technologySubtitle}>
+        Powering Preservation with Innovation
+      </p>
+      {sections.map((section, index) => (
+        <section
+          key={index}
+          className={`${styles.technologySection} ${
+            index % 2 === 1 ? styles.sectionReverse : ""
+          }`}
+        >
+          <div className={styles.technologyText}>
+            <h2>{section.title}</h2>
+            {section.description.map((text, i) => (
+              <p key={i}>{text}</p>
+            ))}
+          </div>
+          <div className={styles.technologyImage}>
+            <img src={section.image} alt={section.title} />
+          </div>
+        </section>
+      ))}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
-          {data.map((item, index) => (
-            <Fade
-              direction={item.animation}
-              delay={500 * index}
-              key={index}
-              triggerOnce
-            >
-              <div
-                className={`${styles.serviceCard} group`}
-                onClick={() => handleToggle(index)}
-              >
-                <div
-                  className={`${styles.imageContainer} relative w-full h-80 overflow-hidden`}
-                >
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    className={`${styles.serviceImage} absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110`}
-                  />
-                </div>
-                <h2 className="text-theme-blue text-center text-xl py-7 bg-white rounded-b-2xl">
-                  {item.title}
-                </h2>
-
-                {activeIndex === index && (
-                  <div className={`${styles.serviceDescriptionTab} bg-white`}>
-                    <p className="text-center text-gray-700 py-3">
-                      {item.description}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </Fade>
+      {/* Additional Technological Features */}
+      <div className={styles.additionalFeatures}>
+        <h2>Additional Technological Features</h2>
+        <ul className={styles.technologyList}>
+          {additionalFeatures.map((feature, index) => (
+            <li key={index}>{feature}</li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );
-}
+};
+
+export default Technology;

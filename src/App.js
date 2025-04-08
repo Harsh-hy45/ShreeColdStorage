@@ -4,7 +4,7 @@ import LandingPage from "pages/LandingPage";
 import ServicesPage from "pages/ServicesPage";
 import NotFoundPage from "pages/NotFoundPage";
 import TechnologyPage from "pages/TechnologyPage";
-import TeamPage from "pages/TeamPage";
+import AboutUsPage from "pages/AboutUsPage";
 
 import { ProjectDetailPage } from "pages/ProjectDetailPage";
 import { DiscussProjectPage } from "pages/DiscussProjectPage";
@@ -19,7 +19,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/technology" element={<TechnologyPage />} />
         <Route exact path="/project/:id" element={<ProjectDetailPage />} />
-        <Route exact path="/team" element={<TeamPage />} />
+        <Route exact path="/aboutus" element={<AboutUsPage />} />
         <Route exact path="/discuss-project" element={<DiscussProjectPage />} />
         <Route path="**" element={<NotFoundPage />} />
       </Routes>

@@ -32,7 +32,7 @@ export default function Footer() {
               Project
             </Link>
             <Link
-              to="/team"
+              to="/aboutus"
               className="flex text-lg text-gray-400 font-light hover:underline"
             >
               Team
@@ -47,7 +47,7 @@ export default function Footer() {
           <div className="w-1/3 mt-0 ml-16 mr-0 sm:ml-0 sm:mr-5">
             <h1 className="text-lg text-theme-blue pt-4 pb-2">Office</h1>
             <p className="text-lg text-gray-400 font-light">
-              info@shreecoldstore.com
+              info.shreecoldstorage@gmail.com
             </p>
             <p className="text-md text-gray-400 font-light">
               M/S Shree Cold Storage <br />

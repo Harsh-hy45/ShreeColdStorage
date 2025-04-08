@@ -1,34 +1,42 @@
 import React, { useState } from "react";
-import { Fade } from "react-awesome-reveal";
-import * as emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css"; // For phone input style
-import { isEmail } from "validator"; // Email validation
+import styles from "../../assets/css/discussForm.module.css";
 
-import { Form } from "elements/Form";
-import Button from "elements/Button";
+const DiscussForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-export const DiscussForm = (actions) => {
-  const { data, resetForm } = actions;
-  const [phone, setPhone] = useState("");
   const [errors, setErrors] = useState({});
-  const [showErrors, setShowErrors] = useState(false);
 
   const validateFields = () => {
-    let isValid = true;
     let newErrors = {};
+    let isValid = true;
 
-    // Email validation
-    if (data.email && !isEmail(data.email)) {
-      newErrors.email = "Invalid email format.";
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required.";
       isValid = false;
     }
-
-    const phoneDigits = phone.startsWith("+91") ? phone.slice(3) : phone;
-    if (phoneDigits.length !== 10) {
-      newErrors.phone = "Phone number must be exactly 10 digits.";
+    if (
+      !formData.email.trim() ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
+    ) {
+      newErrors.email = "Valid email is required.";
+      isValid = false;
+    }
+    if (!formData.phone.trim() || formData.phone.length < 10) {
+      newErrors.phone = "Valid phone number is required.";
+      isValid = false;
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required.";
       isValid = false;
     }
 
@@ -36,178 +44,108 @@ export const DiscussForm = (actions) => {
     return isValid;
   };
 
-  const submitEmail = () => {
-    const { name, company, email, projectIdea } = data;
-
-    const fromEmail = email !== "" ? email : "noreply@shreecoldstore.com";
-    const templateParams = {
-      from_name: `${name} - ${company} ( ${phone} - ${fromEmail} )`,
-      to_name: "Shree Cold Storage",
-      message: projectIdea,
-      reply_to: fromEmail,
-    };
-
-    if (
-      name !== "" &&
-      company !== "" &&
-      phone !== "" &&
-      projectIdea !== "" &&
-      validateFields()
-    ) {
-      emailjs
-        .send(
-          "service_h4gtndg",
-          "template_a9tvs7a",
-          {
-            ...templateParams,
-            to_email_1: "harshchoudhary0345@gmail.com",
-            to_email_2: "info@shreecoldstore.com",
-          },
-          "user_csqIxzN5mKsl1yw4ffJzV"
-        )
-        .then(
-          () => {
-            toast.success(
-              "Success! Your message has been sent to Shree Cold Storage."
-            );
-            resetForm();
-            setPhone("");
-            setErrors({});
-          },
-          (error) => {
-            toast.error("Error sending message. Please try again.");
-          }
-        );
-    } else {
-      setShowErrors(true);
-      toast.error("Please fill out all required fields correctly.");
-    }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleInputChange = (e) => {
-    actions.onChange(e);
-    setShowErrors(false); // Reset errors on input change
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phone: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validateFields()) {
+      toast.error("Please fill in all required fields correctly.");
+      return;
+    }
+
+    const templateParams = {
+      from_name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      to_email: "info.shreecoldstorage@gmail.com",
+    };
+
+    emailjs
+      .send(
+        "service_96jkrfm",
+        "template_7r7ecr1",
+        templateParams,
+        "oh6UFNtUwQuv1LC88"
+      )
+      .then(() => {
+        toast.success("Message sent successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+        setErrors({});
+      })
+      .catch(() => toast.error("Failed to send message. Try again!"));
   };
 
   return (
-    <section className="flex flex-col container mx-auto mt-10 justify-center">
-      <Fade direction="down" triggerOnce>
-        <h1 className="text-5xl text-theme-blue text-center font-bold">
-          Let's Discuss
-        </h1>
-      </Fade>
+    <div className={styles.formContainer}>
+      <h2 className={styles.formTitle}>Contact Us</h2>
+      <form onSubmit={handleSubmit} className={styles.formGrid}>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          placeholder="Your Name"
+          onChange={handleChange}
+          className={styles.inputField}
+        />
+        {errors.name && <span className={styles.errorText}>{errors.name}</span>}
 
-      <Fade direction="up" triggerOnce>
-        <p className="font-light text-lg text-gray-400 text-center mb-12">
-          Please fill out the form below to discuss your project and we'll get
-          back to you in less than 24 hours.
-        </p>
-      </Fade>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          placeholder="example@email.com"
+          onChange={handleChange}
+          className={styles.inputField}
+        />
+        {errors.email && (
+          <span className={styles.errorText}>{errors.email}</span>
+        )}
 
-      <Fade direction="up" triggerOnce>
-        <div className="flex flex-col space-y-6">
-          <div className="flex flex-col sm:flex-row mx-auto space-y-6 sm:space-y-0 sm:space-x-6">
-            <div className="flex flex-col">
-              <Form
-                id="name"
-                name="name"
-                type="text"
-                value={data.name}
-                placeholder="Your name"
-                className="border-2 border-gray-300 rounded-lg px-4 py-2"
-                onChange={handleInputChange}
-                required
-              />
-              {showErrors && !data.name && (
-                <p className="text-red-500 text-sm mt-1">* Name is required</p>
-              )}
-            </div>
-            <div className="flex flex-col">
-              <Form
-                id="company"
-                name="company"
-                type="text"
-                value={data.company}
-                placeholder="Your company"
-                className="border-2 border-gray-300 rounded-lg px-4 py-2"
-                onChange={handleInputChange}
-                required
-              />
-              {showErrors && !data.company && (
-                <p className="text-red-500 text-sm mt-1">
-                  * Company is required
-                </p>
-              )}
-            </div>
-          </div>
+        {/* Phone Input with Country Code */}
+        <PhoneInput
+          country={"in"} // Default country (India)
+          value={formData.phone}
+          onChange={handlePhoneChange}
+          inputProps={{
+            name: "phone",
+            required: true,
+            className: styles.inputField,
+            placeholder: "+91 XXXXX XXXXX",
+          }}
+        />
+        {errors.phone && (
+          <span className={styles.errorText}>{errors.phone}</span>
+        )}
 
-          <div className="flex flex-col sm:flex-row mx-auto space-y-6 sm:space-y-0 sm:space-x-6">
-            <div className="flex flex-col">
-              <Form
-                id="email"
-                name="email"
-                type="email"
-                value={data.email}
-                placeholder="Your email address"
-                className="border-2 border-gray-300 rounded-lg px-4 py-2"
-                onChange={handleInputChange}
-              />
-              {errors.email && (
-                <p className="text-red-500 text-sm mt-1">* {errors.email}</p>
-              )}
-            </div>
-            <div className="flex flex-col">
-              <PhoneInput
-                country={"in"}
-                value={phone}
-                onChange={setPhone}
-                inputProps={{
-                  name: "phone",
-                  required: true,
-                  placeholder: "Your contact number",
-                }}
-                containerClass="border-2 border-gray-300 rounded-lg"
-                inputStyle={{
-                  width: "100%",
-                  borderRadius: "8px",
-                  padding: "10px",
-                }}
-              />
-              {errors.phone && (
-                <p className="text-red-500 text-sm mt-1">* {errors.phone}</p>
-              )}
-            </div>
-          </div>
+        <textarea
+          name="message"
+          value={formData.message}
+          placeholder="Your Message"
+          onChange={handleChange}
+          className={styles.textArea}
+          maxLength={500}
+        />
+        {errors.message && (
+          <span className={styles.errorText}>{errors.message}</span>
+        )}
 
-          <div className="mx-auto w-full sm:w-3/4">
-            <Form
-              id="projectIdea"
-              name="projectIdea"
-              type="textarea"
-              value={data.projectIdea}
-              placeholder="Explain your project idea"
-              className="border-2 border-gray-300 rounded-lg px-4 py-2 w-full"
-              onChange={handleInputChange}
-              required
-            />
-            {showErrors && !data.projectIdea && (
-              <p className="text-red-500 text-sm mt-1">
-                * Project idea is required
-              </p>
-            )}
-          </div>
-
-          <Button
-            className="text-xl mx-auto px-12 py-3 mt-5 bg-theme-purple text-white rounded-full border-2 border-theme-purple hover:bg-dark-theme-purple transition duration-200 focus:outline-none"
-            type="button"
-            onClick={submitEmail}
-          >
-            Submit
-          </Button>
+        <div className={styles.buttonContainer}>
+          <button type="submit" className={styles.submitButton}>
+            Send Message
+          </button>
         </div>
-      </Fade>
-
+      </form>
       <ToastContainer />
-    </section>
+    </div>
   );
 };
+
+export default DiscussForm;

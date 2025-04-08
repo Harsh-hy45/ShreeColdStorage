@@ -2,7 +2,6 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 import servicePortfolio from "assets/images/Services/portfolioHero.png";
 import styles from "../../assets/css/ServicesPages/servicePortfolio.module.css";
-import styles2 from "../../assets/css/ServicesPages/service.module.css";
 
 export default function ServicePortfolio() {
   const services = [

@@ -5,7 +5,7 @@
 import React, { Component } from "react";
 
 import Header from "parts/Header";
-import ServicePortfolio from "parts/ServicesPage/ServicePortfolio";
+import Technology from "parts/TECHNOLOGY/technology";
 import Discuss from "parts/DiscussProjectPage/Discuss";
 import Footer from "parts/Footer";
 import AllPortfolio from "parts/LandingPage/AllPortfolio";
@@ -21,8 +21,7 @@ export default class TechnologyPage extends Component {
     return (
       <>
         <Header />
-        <ServicePortfolio />
-        <AllPortfolio data={Portfolios} />
+        <Technology />
         <Discuss />
         <Footer />
       </>
