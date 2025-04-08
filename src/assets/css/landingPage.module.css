@@ -1,0 +1,16 @@
+.visitDiscussWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* makes both children take equal height */
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.visitDiscussWrapper > * {
+  flex: 1 1 50%; /* each takes 50% width with flexibility */
+  min-width: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
