@@ -11,12 +11,6 @@ import Aura from "../assets/images/Portfolio/Aura.png";
 import Surtido from "../assets/images/Portfolio/Surtido.png";
 import ManagementApp from "../assets/images/Portfolio/ManagementApp.png";
 
-// Advantages
-import Communicative from "../assets/images/Advantages/Communicative.png";
-import Collaborative from "../assets/images/Advantages/Collaborative.png";
-import Management from "../assets/images/Advantages/Management.png";
-import Favorite from "../assets/images/Advantages/Favorite.png";
-
 export const Services = [
   {
     title: "State-of-the-Art Facilities",
@@ -91,34 +85,4 @@ export const Portfolios = [
     credit:
       "https://dribbble.com/shots/15197890-Courses-Management-and-Promoting-Web-App",
   },
-];
-
-export const Advantages = [
-  [
-    {
-      title: "Communicative",
-      description:
-        "We communicate our project ideas and progress to make it clear.",
-      imageUrl: Communicative,
-    },
-    {
-      title: "Management",
-      description:
-        "We manage our project properly to make our project done well.",
-      imageUrl: Management,
-    },
-  ],
-  [
-    {
-      title: "Collaborative​",
-      description:
-        "Our team are very collaborative to make our project done well.",
-      imageUrl: Collaborative,
-    },
-    {
-      title: "Favorite",
-      description: "We've did so many project and all of our client love it.",
-      imageUrl: Favorite,
-    },
-  ],
 ];
