@@ -3,7 +3,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/jsx-filename-extension */
 import React, { Component } from "react";
-import { Services, Portfolios } from "json/landingPageData";
+import { Services } from "json/landingPageData";
 import Header from "parts/Header";
 import ServicePortfolio from "parts/ServicesPage/ServicePortfolio";
 import Discuss from "parts/DiscussProjectPage/Discuss";

@@ -5,7 +5,6 @@ import React, { Component } from "react";
 
 import Header from "parts/Header";
 import AboutUs from "parts/ABOUT US/AboutUs";
-import AllTeam from "parts/ABOUT US/AllTeam";
 import Footer from "parts/Footer";
 
 import { TeamMembers } from "json/landingPageData";
@@ -20,7 +19,6 @@ export default class AboutUsPage extends Component {
       <>
         <Header />
         <AboutUs />
-        {/* <AllTeam data={TeamMembers} /> */}
         <Footer />
       </>
     );
