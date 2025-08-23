@@ -7,8 +7,6 @@ import Header from "parts/Header";
 import AboutUs from "parts/ABOUT US/AboutUs";
 import Footer from "parts/Footer";
 
-import { TeamMembers } from "json/landingPageData";
-
 export default class AboutUsPage extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);

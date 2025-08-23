@@ -29,7 +29,6 @@ export default class LandingPage extends Component {
           <Discuss />
           <VisitUsSection />
         </div>
-
         <Footer />
       </>
     );
