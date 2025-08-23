@@ -8,9 +8,6 @@ import Header from "parts/Header";
 import Technology from "parts/TECHNOLOGY/technology";
 import Discuss from "parts/DiscussProjectPage/Discuss";
 import Footer from "parts/Footer";
-import AllPortfolio from "parts/LandingPage/AllPortfolio";
-
-import { Portfolios } from "json/landingPageData";
 
 export default class TechnologyPage extends Component {
   componentDidMount() {

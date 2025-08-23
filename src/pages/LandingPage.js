@@ -12,7 +12,6 @@ import Hero from "parts/LandingPage/Hero";
 import Service from "parts/ServicesPage/Service";
 import Portfolio from "parts/LandingPage/Portfolio";
 import Advantage from "parts/LandingPage/Advantage";
-import Testimonial from "parts/ABOUT US/Testimonial";
 import Discuss from "parts/DiscussProjectPage/Discuss";
 import Footer from "parts/Footer";
 import VisitUsSection from "parts/DiscussProjectPage/VisitUs";
