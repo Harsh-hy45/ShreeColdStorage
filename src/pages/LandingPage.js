@@ -1,19 +1,16 @@
 import React, { Component } from "react";
 
-import {
-  Services,
-  Portfolios,
-  Advantages,
-  Testimonials,
-} from "json/landingPageData";
+import { Services, Advantages } from "json/landingPageData";
+
 import Header from "parts/Header";
-import Hero from "parts/Hero";
+import Hero from "parts/LandingPage/Hero";
 import Service from "parts/ServicesPage/Service";
-import Portfolio from "parts/Portfolio";
-import Advantage from "parts/Advantage";
-import Testimonial from "parts/Testimonial";
-import Discuss from "parts/Discuss";
+import Advantage from "parts/LandingPage/Advantage";
+import Discuss from "parts/DiscussProjectPage/Discuss";
 import Footer from "parts/Footer";
+import VisitUsSection from "parts/DiscussProjectPage/VisitUs";
+
+import styles from "../assets/css/landingPage.module.css";
 
 export default class LandingPage extends Component {
   componentDidMount() {
@@ -23,14 +20,15 @@ export default class LandingPage extends Component {
   render() {
     return (
       <>
-        {/* Pass the transparentBackground prop for Header in LandingPage */}
         <Header transparentBackground={true} />
         <Hero />
         <Service data={Services} />
-        {/* <Portfolio data={Portfolios} /> */}
-        <Advantage data={Advantages} />
-        {/* <Testimonial data={Testimonials} /> */}
-        <Discuss />
+        <Advantage />
+        {/* Combined VisitUsSection and Discuss */}
+        <div className={styles.visitDiscussWrapper}>
+          <Discuss />
+          <VisitUsSection />
+        </div>
         <Footer />
       </>
     );

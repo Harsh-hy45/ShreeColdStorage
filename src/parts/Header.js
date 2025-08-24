@@ -11,10 +11,9 @@ export default function Header({ transparentBackground }) {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/team" },
+    { name: "About", href: "/aboutUs" },
     { name: "Services", href: "/services" },
     { name: "Technology", href: "/technology" },
-    { name: "FAQ", href: "/faq" },
   ];
 
   return (

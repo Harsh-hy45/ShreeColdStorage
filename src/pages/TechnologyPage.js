@@ -1,0 +1,27 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/jsx-filename-extension */
+import React, { Component } from "react";
+
+import Header from "parts/Header";
+import Technology from "parts/TECHNOLOGY/technology";
+import Discuss from "parts/DiscussProjectPage/Discuss";
+import Footer from "parts/Footer";
+
+export default class TechnologyPage extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
+  render() {
+    return (
+      <>
+        <Header />
+        <Technology />
+        <Discuss />
+        <Footer />
+      </>
+    );
+  }
+}

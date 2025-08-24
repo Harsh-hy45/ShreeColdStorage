@@ -1,0 +1,131 @@
+/* Main container */
+.technologyContainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Title and subtitle */
+.technologyTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.technologySubtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Individual sections */
+.technologySection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f4f4;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternating sections */
+.sectionReverse {
+  flex-direction: row-reverse;
+}
+
+/* Text styling */
+.technologyText {
+  flex: 1;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.technologyText h2 {
+  font-size: 1.8rem;
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+.technologyText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Image styling */
+.technologyImage {
+  flex: 1;
+  text-align: center;
+}
+
+.technologyImage img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional Technological Features Section */
+.additionalFeatures {
+  background: #e3f2fd;
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 60px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.additionalFeatures h2 {
+  font-size: 2rem;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+/* Features list */
+.technologyList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.technologyList li {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.technologyList li:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .technologySection {
+    flex-direction: column;
+  }
+
+  .technologyText {
+    text-align: center;
+    padding: 0;
+  }
+
+  .technologyList {
+    grid-template-columns: 1fr;
+  }
+}

@@ -2,58 +2,100 @@
   background-color: white;
   border-radius: 16px;
   border: 1px solid #e5e7eb;
-  transition: transform 0.5s;
+  transition: transform 0.3s ease-in-out;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding-bottom: 10px;
 }
 
 .serviceCard:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .imageContainer {
-  height: 320px;
+  height: 280px;
   border-radius: 16px 16px 0 0;
 }
 
-.serviceDescriptionTab {
-  border-top: 2px solid #d1d5db;
-  border-radius: 0 0 16px 16px;
-  text-align: center;
-  font-size: 1rem;
-  transition: opacity 0.3s ease-in-out;
-  padding: 10px 20px;
-}
-
-.serviceDescriptionTab p {
-  margin: 0;
-}
-
 .serviceImage {
-  transition: transform 0.5s;
+  transition: transform 0.5s ease-in-out;
 }
 
 .serviceImage:hover {
   transform: scale(1.1);
 }
 
+.serviceDescriptionTab {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.expanded {
+  opacity: 1;
+}
+
+/* Updated button style */
+.toggleButton {
+  display: block;
+  width: 80%; /* Made button smaller */
+  margin: 8px auto;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 0; /* Reduced padding */
+  cursor: pointer;
+  font-size: 0.8rem; /* Reduced font size */
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.toggleButton:hover {
+  background-color: #0056b3;
+}
+
+/* Added spacing below the description */
 .mainDescription {
-  padding: 0rem 2rem;
-  padding-bottom: 2rem;
-  margin-top: 1.5rem;
+  margin-bottom: 24px; /* Added bottom margin */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .imageContainer {
+    height: 220px;
+  }
 }
 
 @media (max-width: 768px) {
   .imageContainer {
-    height: 250px;
+    height: 200px;
   }
 
   .serviceDescriptionTab {
     font-size: 0.9rem;
   }
 
-  .mainDescription {
-    padding: 0rem 2rem;
-    padding-bottom: 2rem;
-    max-width: 100%;
+  .toggleButton {
+    font-size: 0.75rem; /* Smaller button */
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageContainer {
+    height: 180px;
+  }
+
+  .serviceCard {
+    border-radius: 12px;
+  }
+
+  .toggleButton {
+    font-size: 0.7rem; /* Smaller on small screens */
   }
 }

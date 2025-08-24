@@ -3,9 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import LandingPage from "pages/LandingPage";
 import ServicesPage from "pages/ServicesPage";
 import NotFoundPage from "pages/NotFoundPage";
-import TeamPage from "pages/TeamPage";
-
-import { ProjectDetailPage } from "pages/ProjectDetailPage";
+import TechnologyPage from "pages/TechnologyPage";
+import AboutUsPage from "pages/AboutUsPage";
 import { DiscussProjectPage } from "pages/DiscussProjectPage";
 
 import "./assets/css/styles.css";
@@ -16,8 +15,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/services" element={<ServicesPage />} />
-        <Route exact path="/project/:id" element={<ProjectDetailPage />} />
-        <Route exact path="/team" element={<TeamPage />} />
+        <Route path="/technology" element={<TechnologyPage />} />
+        <Route exact path="/aboutus" element={<AboutUsPage />} />
         <Route exact path="/discuss-project" element={<DiscussProjectPage />} />
         <Route path="**" element={<NotFoundPage />} />
       </Routes>
